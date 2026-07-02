@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>聯絡我們｜仁齊企業有限公司 TOPBOUND</title>
+<meta name="description" content="仁齊企業有限公司聯絡資訊：地址、電話、傳真、電子信箱與服務時間。歡迎業務洽詢。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a href="index.html" class="brand">
+      <span class="brand-zh">仁齊企業有限公司</span>
+      <span class="brand-en">TOPBOUND ENTERPRISE CO., LTD.</span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">首頁</a>
+      <a href="about.html">關於我們</a>
+      <a href="products.html">產品介紹</a>
+      <a href="certifications.html">認證</a>
+      <a href="contact.html" class="active">聯絡我們</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="開啟選單"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <div class="eyebrow">GET IN TOUCH</div>
+    <h1>聯絡我們</h1>
+    <p>業務聯絡窗口，歡迎透過電話、電子信箱或線上表單與我們聯繫。</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap contact-grid">
+    <div>
+      <div class="info-row">
+        <div class="label">公司</div>
+        <div class="value">仁齊企業有限公司</div>
+      </div>
+      <div class="info-row">
+        <div class="label">地址</div>
+        <div class="value">242 新北市新莊區幸福東路57號
+          <small>No. 57, Xingfu E. Rd., Xinzhuang Dist., New Taipei City 242040, Taiwan (R.O.C.)</small>
+        </div>
+      </div>
+      <div class="info-row">
+        <div class="label">電話</div>
+        <div class="value"><a href="tel:+886222996201">886-2-2299-6201</a></div>
+      </div>
+      <div class="info-row">
+        <div class="label">傳真</div>
+        <div class="value">886-2-2299-6203</div>
+      </div>
+      <div class="info-row">
+        <div class="label">信箱</div>
+        <div class="value"><a href="mailto:service@topbound.com">service@topbound.com</a></div>
+      </div>
+      <div class="info-row">
+        <div class="label">服務時間</div>
+        <div class="value">週一至週五 08:00 ~ 17:00</div>
+      </div>
+    </div>
+
+    <div>
+      <div class="eyebrow">ONLINE FORM 線上表單</div>
+      <form class="contact-form" id="contactForm">
+        <div class="field">
+          <label for="name">姓名</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="field">
+          <label for="company">公司名稱</label>
+          <input type="text" id="company" name="company">
+        </div>
+        <div class="field">
+          <label for="email">電子信箱</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="field">
+          <label for="message">需求說明</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-dark" style="align-self:flex-start;">送出訊息</button>
+        <p style="font-size:12.5px; color:var(--steel-500);">送出後將開啟您的電子郵件軟體，將內容寄至 service@topbound.com</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="foot-brand">仁齊企業有限公司</div>
+      <div>242 新北市新莊區幸福東路57號</div>
+      <div>TEL 886-2-22996201　FAX 886-2-22996203</div>
+    </div>
+    <div style="display:flex; gap:40px;">
+      <div>
+        <div style="color:var(--paper-0); margin-bottom:10px; font-weight:600;">網站導覽</div>
+        <div style="display:flex; flex-direction:column; gap:8px;">
+          <a href="about.html">關於我們</a>
+          <a href="products.html">產品介紹</a>
+          <a href="certifications.html">認證</a>
+          <a href="contact.html">聯絡我們</a>
+        </div>
+      </div>
+      <div>
+        <div style="color:var(--paper-0); margin-bottom:10px; font-weight:600;">聯絡方式</div>
+        <div style="display:flex; flex-direction:column; gap:8px;">
+          <a href="mailto:service@topbound.com">service@topbound.com</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wrap foot-bottom">© 2026 TOPBOUND ENTERPRISE CO., LTD. ALL RIGHTS RESERVED.</div>
+</footer>
+
+<script>
+  document.getElementById('navToggle').addEventListener('click', function(){
+    document.getElementById('navLinks').classList.toggle('open');
+  });
+  document.getElementById('contactForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    var name = document.getElementById('name').value;
+    var company = document.getElementById('company').value;
+    var email = document.getElementById('email').value;
+    var message = document.getElementById('message').value;
+    var body = '姓名：' + name + '\n公司名稱：' + company + '\n電子信箱：' + email + '\n\n需求說明：\n' + message;
+    window.location.href = 'mailto:service@topbound.com?subject=' + encodeURIComponent('網站洽詢 - ' + name) + '&body=' + encodeURIComponent(body);
+  });
+</script>
+</body>
+</html>
